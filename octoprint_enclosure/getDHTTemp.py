@@ -1,6 +1,6 @@
 import sys
 import time
-import board
+from board import D17, D18
 import adafruit_dht
 
 
