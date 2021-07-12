@@ -1,14 +1,8 @@
-# QUICK NOTE: I suffered an injury last Sunday (06/20/20) and broke both bones on my left forearm, it will be impossible to work on on this plugin in the near future, I'm struggling to make it work with a full time job + masters in computers science. This plugin is not abandoned but it is on vacation mode.
-
-
-Find the plugin useful? Buy me a coffee
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/VitorHenrique/2)
-
 # Before opening an issue...
 
-Check the [troubleshooting guide](https://github.com/vitormhenrique/OctoPrint-Enclosure/wiki/Troubleshooting-Guide). Issues with no log, no print screen *will be closed* until the necessary documentation is available.
+Check the [troubleshooting guide](https://github.com/ashpika40/OctoPrint-Enclosure/wiki/Troubleshooting-Guide). Issues with no log, no print screen *will be closed* until the necessary documentation is available.
 
-Also, be aware that upgrading from versions lower than 4.00 will **DELETE** all settings. More information on [release notes](https://github.com/vitormhenrique/OctoPrint-Enclosure/releases/tag/4.00)
+Also, be aware that upgrading from versions lower than 4.00 will **DELETE** all settings. More information on [release notes](https://github.com/ashpika40/OctoPrint-Enclosure/releases/tag/4.00)
 
 # OctoPrint-Enclosure
 
@@ -48,20 +42,22 @@ You need to install Adafruit library to use the temperature sensor on raspberry 
 Open raspberry pi terminal and type:
 
 <pre><code>cd ~
-git clone https://github.com/adafruit/Adafruit_Python_DHT.git
-cd Adafruit_Python_DHT
+git clone https://github.com/adafruit/Adafruit_CircuitPython_DHT.git
+cd Adafruit_CircuitPython_DHT
 sudo apt-get update
 sudo apt-get install build-essential python-dev python-openssl
-sudo python setup.py install</code></pre>
+sudo pip3 install adafruit-circuitpython-dht
+pip3 install adafruit-circuitpython-lis3dh
+sudo python3 setup.py install</code></pre>
 
 Note: All libraries need to be installed on raspberry pi system python not octoprint virtual environment.
 
 You can test the library by using:
 
 <pre><code>cd examples
-sudo ./AdafruitDHT.py 2302 4</code></pre>
+sudo ./dht_simpletest.py</code></pre>
 
-Note that the first argument is the temperature sensor (11, 22, or 2302), and the second argument is the GPIO  that the sensor was connected.
+Note that the DHT22 sensor is to be connected to GPIO 18 (pin 12). Incase it is DHT11 sensor, open the dht_simpletest.py and change DHT22 to DHT!! in line number 9. Also you can change the pin in the same line.
 
 * For the DS18B20 sensor:
 
