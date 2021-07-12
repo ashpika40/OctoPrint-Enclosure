@@ -24,7 +24,7 @@ plugin_description = "Awesome plugin to control everything that you ever wanted 
 plugin_author = "Harsha Jilludimudi"
 
 # The plugin's author's mail address.
-plugin_author_email = "vitormhenrique@gmail.com"
+plugin_author_email = "ashpika40@gmail.com"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
 plugin_url = "https://github.com/ashpika40/OctoPrint-Enclosure"
