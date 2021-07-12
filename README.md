@@ -51,7 +51,7 @@ You can test the library by using:
 <pre><code>cd examples
 sudo ./dht_simpletest.py</code></pre>
 
-Note that the DHT22 sensor is to be connected to GPIO 18 (pin 12). Incase it is DHT11 sensor, open the dht_simpletest.py and change DHT22 to DHT!! in line number 9. Also you can change the pin in the same line.
+Note that the DHT22 sensor is to be connected to GPIO 18 (pin 12). Incase it is DHT11 sensor, open the dht_simpletest.py and change DHT22 to DHT11 in line 9. Also you can change the pin in the same line.
 
 * For the DS18B20 sensor:
 
